@@ -3,7 +3,8 @@ FROM kxes/ubuntu-xrdp-base
 MAINTAINER josh@kxes.net
 
 # set new password
-RUN passwd
+RUN echo "root:Docker" | chpasswd
+
 
 # install required tools
 RUN apt-get update && apt-get install --yes --force-yes --no-install-recommends git wget rsync && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && apt-get install xubuntu-desktop
