@@ -7,7 +7,7 @@ RUN echo "root:Docker" | chpasswd
 
 
 # install required tools
-RUN apt-get update && apt-get install --yes --force-yes --no-install-recommends git wget rsync && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get update && apt-get install --yes --force-yes --no-install-recommends git wget rsync xfce4-goodies thunderbird firefox pidgin && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # install platform-client
 RUN cd /usr/bin && wget https://github.com/kxes/platform-client/raw/master/platform-client && chmod +x platform-client
