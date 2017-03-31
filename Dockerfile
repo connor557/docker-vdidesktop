@@ -7,7 +7,7 @@ RUN echo "root:Docker" | chpasswd
 
 # install required tools
 RUN apt-get update \
-    && apt-get install software-properties-common \
+    && apt-get install --yes --force-yes --no-install-recommends software-properties-common \
         xorg \
         xserver-xorg \
         lightdm \
@@ -26,7 +26,7 @@ RUN apt-get update \
         pidgin \
     && add-apt-repository -y ppa:numix/ppa \
     && apt-get update \
-    && apt-get install numix-icon-theme numix-icon-theme-circle \
+    && apt-get install --yes --force-yes --no-install-recommends numix-icon-theme numix-icon-theme-circle \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
