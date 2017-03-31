@@ -1,6 +1,6 @@
-FROM kxes/ubuntu-xrdp-base
+FROM connor557/ubuntu-xrdp-base
 
-MAINTAINER josh@kxes.net
+MAINTAINER cobrien@connorcrew.us.to
 
 # set new password
 RUN echo "root:Docker" | chpasswd
